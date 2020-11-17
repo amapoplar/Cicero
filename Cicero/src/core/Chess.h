@@ -11,23 +11,26 @@ namespace  Cicero {
 		PA,
 		ZU
 	};
+	enum MoveWho
+	{
+		RED,
+		BLACk
+	};
 	class Chess
 	{
 	public:
-		Chess(ChessName _name,bool _redQ);
+		Chess(ChessName _name, MoveWho _redQ, double scale);
 
-		void setPos(int _x, int _y) {
-			x = _x; y = _y; 
-			m_Sprite.setPosition(sf::Vector2f(size * x, size * y));
-		}
+		void setPos(int _x, int _y);
 		sf::Sprite* getSprite() { return &m_Sprite; }
 		int x, y;
-		int Tx, Ty;
-		bool redQ;
-	private:
+		MoveWho redQ;
 		ChessName name;
+	private:
+		double scale;
+		int Lsize = 242;
 		sf::Sprite m_Sprite;
-		const int size = 242;
+		sf::Texture tChess;
 	};
 }
 
