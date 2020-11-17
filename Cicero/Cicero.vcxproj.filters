@@ -12,11 +12,16 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="src\core\EntryPoint.h" />
+    <ClInclude Include="src\core\Chess.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cicpch.cpp" />
     <ClCompile Include="src\core\Game.cpp">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="src\core\Chess.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\images\chessboard.png" />
   </ItemGroup>
 </Project>

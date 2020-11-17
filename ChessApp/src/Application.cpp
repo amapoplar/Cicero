@@ -2,6 +2,6 @@
 int main()
 {
     Cicero::Game *game = new Cicero::Game();
-    game->show();
+    game->Show();
     return 0;
 }
