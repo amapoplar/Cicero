@@ -93,21 +93,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\core\Chess.h" />
     <ClInclude Include="src\cicero.h" />
     <ClInclude Include="src\cicpch.h" />
     <ClInclude Include="src\core\EntryPoint.h" />
     <ClInclude Include="src\core\Game.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\core\Chess.cpp" />
     <ClCompile Include="src\cicpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\core\Game.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="src\images\chessboard.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

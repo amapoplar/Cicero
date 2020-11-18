@@ -1,7 +1,12 @@
 #pragma once
 #include<SFML/Graphics.hpp>
-#include"Chess.h"
+
 namespace Cicero {
+	struct Chess
+	{
+		int pos;
+		int name;
+	};
 
 	class Game:public sf::RenderWindow
 	{
@@ -10,16 +15,16 @@ namespace Cicero {
 		void Show();
 		void Update(sf::Event event);
 	private:
-		int size = 242;
-		double scale = 0.4;
-		MoveWho who = MoveWho::RED;
-		Chess* movingChess = nullptr;
-		sf::Texture tBoard;
-		sf::Sprite sBoard;
-		std::vector<Chess*> Chesses;
-		sf::Vector2i oldpos,newpos;
-		bool leaglQ();
-
+		double scale;
+		bool isMove =false;
+		bool isRed = true;
+		sf::Texture tBoard,tChess;
+		sf::Sprite sBoard,sChess;
+		Chess movingChess;
+		bool legalQ(int x, int y);
+		bool ruleQ(int x, int y);
+		void showBorad();
+		int checkMate();
 	};
 
 
